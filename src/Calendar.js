@@ -15,6 +15,7 @@ const propTypes = {
   onPickDate: PropTypes.func,
   onPickRange: PropTypes.func,
   selectedDay: momentObj,
+  onHoverDate: PropTypes.func,
   customClasses: PropTypes.oneOfType([PropTypes.object, PropTypes.func])
 };
 
@@ -27,6 +28,7 @@ const defaultProps = {
   onPickDate: null,
   onPickRange: null,
   selectedDay: moment(),
+  onHoverDate: null,
   customClasses: null
 };
 
@@ -87,6 +89,11 @@ class Calendar extends Component {
       this.setState({
         selectingRange
       });
+    }
+
+    const { onHoverDate } = this.props;
+    if (onHoverDate) {
+      onHoverDate(hoveredDay);
     }
   }
 
