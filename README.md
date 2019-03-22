@@ -64,6 +64,7 @@ ReactDOM.render(
 |------|------|--------|-------------|
 | onPickDate| React.PropTypes.func | function(selectedDay, dayClasses) {} | called when user clicks on a day. `dayClasses` is a string representing the classes applied to that day |
 | onPickRange| React.PropTypes.func | function(rangeStart, rangeEnd) {} | called when user selects a range of dates (only in `selectRange` mode) |
+| onHoverDate| React.PropTypes.func | function(hoveredDay) {} | called when user hovers over a day. |
 
 #### CalendarControls
 
